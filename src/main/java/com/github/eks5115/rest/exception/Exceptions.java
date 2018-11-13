@@ -1,4 +1,4 @@
-package com.xrotor.rest.exception;
+package com.github.eks5115.rest.exception;
 
 import org.springframework.validation.BindingResult;
 

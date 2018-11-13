@@ -1,6 +1,6 @@
-package com.xrotor.rest.exception.handler;
+package com.github.eks5115.rest.exception.handler;
 
-import com.xrotor.rest.exception.RestValidationException;
+import com.github.eks5115.rest.exception.RestValidationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
