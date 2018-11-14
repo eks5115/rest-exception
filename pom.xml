@@ -6,12 +6,29 @@
 
     <groupId>com.github.eks5115</groupId>
     <artifactId>rest-exception</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>exception</name>
-    <!-- FIXME change it to the project's website -->
-    <url>http://www.example.com</url>
+    <name>rest-exception</name>
+    <description>rest exception handler</description>
+    <url>http://github.com/eks5115/rest-exception</url>
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>eks5115</name>
+            <email>eks5115@139.com</email>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:git://github.com/eks5115/rest-exception.git</connection>
+        <developerConnection>scm:git:git@github.com:eks5115/rest-exception.git</developerConnection>
+        <url>http://github.com/eks5115/rest-exception/tree/master</url>
+    </scm>
 
     <properties>
         <java.version>1.8</java.version>
@@ -50,6 +67,21 @@
 
     <build>
         <plugins>
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.7</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>sonatype-oss</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -90,7 +122,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
 
